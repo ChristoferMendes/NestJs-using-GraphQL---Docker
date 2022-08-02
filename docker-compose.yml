@@ -1,0 +1,22 @@
+version: "2.0"  # optional since v1.27.0
+
+services:
+
+  api:
+    container_name: nest_api
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/home/api
+      - /home/api/node_modules
+      
+  database:
+    image: postgres
+    container_name: nest_db
+    environment:
+      POSTGRES_DB: nest_js
+      POSTGRES_USER: mmtec
+      POSTGRES_PASSWORD: 36257
+    ports:
+      - "5433:5433"
