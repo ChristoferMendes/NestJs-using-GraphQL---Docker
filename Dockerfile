@@ -5,7 +5,7 @@ WORKDIR /home/api
 COPY package.json .
 COPY package-lock.json .
 
-RUN npm install
+RUN npm install && npm i --save @nestjs/config
 
 COPY . . 
 

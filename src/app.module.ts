@@ -1,3 +1,4 @@
+import { ConfigModule } from '@nestjs/config';
 import { Module } from 'node_modules/@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -9,6 +10,7 @@ import { ApolloDriverConfig } from '@nestjs/apollo';
 import { UserModule } from './user/user.module';
 @Module({
   imports: [
+    ConfigModule.forRoot(),
     UserModule,
     TypeOrmModule.forRoot({
       type: 'postgres',

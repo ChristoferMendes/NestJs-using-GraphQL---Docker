@@ -1,4 +1,4 @@
-version: "2.0"  # optional since v1.27.0
+version: '3.8'
 
 services:
 
@@ -6,7 +6,7 @@ services:
     container_name: nest_api
     build: .
     ports:
-      - "3000:3000"
+      - ${PORT}:${PORT}
     volumes:
       - .:/home/api
       - /home/api/node_modules
