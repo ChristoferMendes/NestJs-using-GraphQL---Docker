@@ -2,9 +2,9 @@ import {
   Injectable,
   InternalServerErrorException,
   NotFoundException,
-} from 'node_modules/@nestjs/common';
-import { InjectRepository } from 'node_modules/@nestjs/typeorm';
-import { Repository } from 'node_modules/typeorm';
+} from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 import { CreateUserInput } from './dto/create-user.input';
 import { UpdateUserInput } from './dto/update-user.input';
 import { User } from './user.entity';

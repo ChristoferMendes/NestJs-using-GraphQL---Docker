@@ -1,4 +1,4 @@
-import { Test, TestingModule } from 'node_modules backup/@nestjs/testing';
+import { Test, TestingModule } from '@nestjs/testing';
 import { UserService } from './user.service';
 
 describe('UserService', () => {
