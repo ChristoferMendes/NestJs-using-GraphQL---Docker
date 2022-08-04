@@ -46,7 +46,9 @@ export class UserService {
     const userSaved = await this.userRepository.save(user);
 
     if (!userSaved) {
-      throw new InternalServerErrorException('Problem when creating a user');
+      throw new InternalServerErrorException(
+        'Problem when creating a user, try again!',
+      );
     }
 
     return userSaved;
