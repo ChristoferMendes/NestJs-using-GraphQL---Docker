@@ -86,7 +86,7 @@ describe('UserService', () => {
       const user = TestUtil.giveMeAValidUser();
       mockRepository.save.mockReturnValue(null);
       mockRepository.create.mockReturnValue(user);
-      await service.createUser(user).catch(e => {
+      await service.createUser(user).catch((e) => {
         expect(e).toBeInstanceOf(InternalServerErrorException);
         expect(e).toMatchObject({
           message: 'Problem when creating a user, try again!',
