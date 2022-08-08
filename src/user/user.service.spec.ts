@@ -33,7 +33,7 @@ describe('UserService', () => {
     service = module.get<UserService>(UserService);
   });
 
-  beforeEach(() =>{
+  beforeEach(() => {
     mockRepository.find.mockReset();
     mockRepository.findOne.mockReset();
     mockRepository.create.mockReset();
